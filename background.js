@@ -53,37 +53,3 @@ browser.webNavigation.onBeforeNavigate.addListener(function (details) {
             console.log(`error: ${error}`);
         });    
 });
-
-// browser.storage.sync.get("blockedUrls")
-//     .then(function (result) {
-//         var blockedUrlString = result.blockedUrls
-
-//         console.log(`blocked urls: ${blockedUrlString}`)
-
-//         var blockedUrls = new Set([]);
-//         if (blockedUrlString.indexOf(',') > -1) {
-//             blockedUrlString.split(',').forEach(function (item) {
-//                 blockedUrls.add(hostName(item))
-//             });
-//         } else {
-//             blockedUrls.add(hostName(blockedUrlString))
-//         }
-
-//         // var filters = [];
-//         // blockedUrls.forEach(function (item, index) {
-//         //     filters.push({ hostContains: item });
-//         // })
-
-//         // console.log(filters)
-
-//         // const filter = {
-//         //     url: filters,
-//         // };
-
-//         browser.webNavigation.onBeforeNavigate.addListener(function (details) {
-//             onBefore(details, [...blockedUrls])
-//         });
-
-//     }, function (error) {
-//         console.log(`Error: ${error}`);
-//     });
