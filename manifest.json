@@ -1,0 +1,24 @@
+{
+    "description": "Block websites",
+    "manifest_version": 2,
+    "name": "backstab",
+    "version": "1.0",
+    "permissions": [
+        "webNavigation",
+        "<all_urls>",
+        "storage"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "options_ui": {
+        "page": "pages/options.html"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "timmakesthings@gmail.com"
+        }
+    }
+}
